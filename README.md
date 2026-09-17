@@ -1,4 +1,4 @@
-# The Laws of Building
+﻿# The Laws of Building
 
 **Turn Claude Code into a four-level company that ships Apple-grade work. One file. Any device. Say "follow the laws".**
 
@@ -32,14 +32,14 @@ You need [Claude Code](https://claude.com/claude-code) and git.
 **Windows (PowerShell):**
 
 ```powershell
-git clone https://github.com/buildtechhubbd/claude-laws "$HOME\claude-laws"
+git clone https://github.com/WashifAbdullah/claude-laws "$HOME\claude-laws"
 powershell -NoProfile -ExecutionPolicy Bypass -File "$HOME\claude-laws\sync-laws.ps1"
 ```
 
 **Mac / Linux:**
 
 ```bash
-git clone https://github.com/buildtechhubbd/claude-laws ~/claude-laws
+git clone https://github.com/WashifAbdullah/claude-laws ~/claude-laws
 bash ~/claude-laws/sync-laws.sh
 ```
 
