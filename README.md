@@ -1,19 +1,31 @@
 # The Laws of Building
 
-This is how my Claude runs every project. I am not a coder. I run a web agency, and I wanted one set of rules that Claude follows in every chat, on every device, without me repeating myself.
+**Turn Claude Code into a four-level company that ships Apple-grade work. One file. Any device. Say "follow the laws".**
 
-Think of it as a small company:
+I run a web agency in Bangladesh and I am not a coder. I got tired of re-explaining to Claude how I want things done, so I wrote it down once as law. Now every chat, on every machine, starts already knowing the rules. This repo is that file. Take it, use it, make it yours.
 
-- **Fable is Steve Jobs.** The one I talk to. Fable asks me what I really need, plans the work, suggests better options, and is the final gate. Fable never writes code.
-- **Opus is the operations manager.** Takes Fable's brief, splits it into sections, and runs a Sonnet team on each. Then audits every team's work like a QA engineer, fixes what is left, and hands it up.
-- **Sonnet is the specialist team.** One team per section. They build.
-- **Haiku is the copy staff.** Opus picks the keywords that rank locally, sets the style, and Haiku writes the words.
+## The company inside your Claude
 
-Nothing reaches me until it would pass Steve Jobs' eyes. Zero AI slop. Every tool Claude needs, it asks for first. Tokens go where they buy perfection and nowhere else.
+| Role | Model | Job |
+|---|---|---|
+| **Steve Jobs** | Fable (the main chat) | Talks to you, finds what you really need, suggests better options, plans, writes the brief. Final gate. Never writes code. |
+| **Operations manager** | Opus | Splits the brief into sections, runs one Sonnet team per section, audits every result like a QA engineer, fixes what is left, hands it up. |
+| **Specialist teams** | Sonnet | One team per section. They build. |
+| **Copy staff** | Haiku | Opus picks the keywords that rank locally and sets the style; Haiku writes the words. |
 
-The full text is in [CLAUDE.md](CLAUDE.md). It is written for Claude to read, so it is long and exact. `LAWS-BACKUP.md` is the safety copy.
+Two audit gates. A fix loop that runs until it is right. Nothing reaches you until it would pass Steve Jobs' eyes.
 
-## Use these laws in your own Claude Code
+## What the laws guarantee
+
+- **Interview first.** Claude asks about the project (and where it will be hosted) before planning anything. It never guesses the brief.
+- **Right model, right job.** Always the latest tier. Wrong agent for the task is a violation.
+- **Zero AI slop.** Code, copy, layout, all judged by an Apple bar before you see it.
+- **Skills by judgment.** Claude picks the skills a project needs instead of firing all of them.
+- **Ask, then use.** Any new tool, install, or paid call is asked for in one line first.
+- **Tokens aimed, not sprayed.** Deep thinking where it earns its keep, lean everywhere else.
+- **Permanent.** Only the owner changes the laws, in writing. A backup copy self-heals the main file.
+
+## Install (2 minutes)
 
 You need [Claude Code](https://claude.com/claude-code) and git.
 
@@ -31,18 +43,25 @@ git clone https://github.com/buildtechhubbd/claude-laws ~/claude-laws
 bash ~/claude-laws/sync-laws.sh
 ```
 
-That copies the laws into `~/.claude/CLAUDE.md`, the file Claude Code reads at the start of every chat. Run the same sync command again any time to pull the latest version.
+That puts the laws into `~/.claude/CLAUDE.md`, the file Claude Code reads at the start of every chat. Run the sync again any time to get the latest version, or make it automatic: open Claude Code and say *"add ~/claude-laws/sync-laws.ps1 (or sync-laws.sh) as a SessionStart hook"*.
 
-To make it automatic, add the sync command as a `SessionStart` hook in `~/.claude/settings.json`. Claude Code can do this for you: open a chat and say *"add ~/claude-laws/sync-laws.ps1 (or .sh) as a SessionStart hook"*.
+Already have your own `CLAUDE.md`? The script will not overwrite unsynced edits. Paste in the laws you want, or fork and edit.
 
-If you already have your own `~/.claude/CLAUDE.md`, the sync script will not overwrite it while it has unsynced edits. Merge by hand, or paste the laws you want into your own file.
+Some laws name skills I have installed (impeccable, Emil Kowalski's design skills, GSAP, find-skills, Strapi and Nginx, ECC). Claude skips the ones you do not have, or asks before installing them.
 
-Some laws mention skills I have installed (impeccable, Emil Kowalski's design skills, GSAP, find-skills, Strapi and Nginx skills, ECC). Claude will simply skip the ones you do not have, or ask before installing them.
+## Then say the magic words
 
-## Say the magic words
+> **follow the laws**
 
-In any chat: **"follow the laws"**. Claude loads the full stack at full power, no shortcuts.
+Claude loads the full stack at full power. No shortcuts.
 
-## Change the laws
+## Files
 
-Only I change these laws, in writing. Fork the repo and edit `CLAUDE.md` if you want your own version.
+- `CLAUDE.md` - the laws, written for Claude to read (long and exact on purpose)
+- `LAWS-BACKUP.md` - the safety copy Claude restores from
+- `sync-laws.ps1` / `sync-laws.sh` - pull the latest laws into place
+- `publish-laws.ps1` - owner only, pushes changes here
+
+If this saved you from re-explaining yourself one more time, a star helps other people find it.
+
+MIT licensed. Fork it, change the names, build your own company.
