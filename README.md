@@ -25,7 +25,15 @@ Two audit gates. A fix loop that runs until it is right. Nothing reaches you unt
 - **Tokens aimed, not sprayed.** Deep thinking where it earns its keep, lean everywhere else.
 - **Permanent.** Only the owner changes the laws, in writing. A backup copy self-heals the main file.
 
-## Install (2 minutes)
+## Install as a skill (30 seconds)
+
+```bash
+npx skills add WashifAbdullah/claude-laws
+```
+
+That installs the skill **The Laws of Building** into Claude Code (and any other agent the skills CLI supports). Claude then applies the laws whenever you start a build, or the moment you say "follow the laws".
+
+## Or install as your global CLAUDE.md (2 minutes)
 
 You need [Claude Code](https://claude.com/claude-code) and git.
 
@@ -57,6 +65,7 @@ Claude loads the full stack at full power. No shortcuts.
 
 ## Files
 
+- `skills/the-laws-of-building/` - the skill (SKILL.md + LAWS.md), what `npx skills add` installs
 - `CLAUDE.md` - the laws, written for Claude to read (long and exact on purpose)
 - `LAWS-BACKUP.md` - the safety copy Claude restores from
 - `sync-laws.ps1` / `sync-laws.sh` - pull the latest laws into place
